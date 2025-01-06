@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10;
+    padding: 10;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    /* witflix layer boyutu */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+header .logo {
+    font-size: 64px;
+    color: red;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+header .search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+}
+
+header .search input {
+    padding: 5px 30px 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 200px;
+    font-size: 16px;
+    background-color: #fff;
+    outline: none;
+}
+
+header .search input::before {
+    content: "\1F50D";
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+header .search button {
+    background-color: #ff5f5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+}
+
+section {
+    padding: 20px;
+}
+
+.age-restriction {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Şeffaf arka plan */
+    color: white;
+    /* Yazı rengi beyaz */
+    padding: 5px 10px;
+    /* Daha küçük iç boşluk */
+    border-radius: 50%;
+    /* Yuvarlak yapmak için */
+    font-weight: bold;
+    font-size: 12px;
+    /* Küçük font boyutu */
+    text-align: center;
+    line-height: 20px;
+    /* Dairenin içine düzgün yerleşmesi için daha küçük line-height */
+    border: 2px solid white;
+    /* Beyaz kenarlık */
+}
+
+.movie-poster {
+    width: 97vw;
+    height: 30vw;
+    margin-right: 20px;
+}
+
+.movie-info {
+    flex: 1;
+}
+
+.movie-info h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.movie-info p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.movie-info button {
+    background-color: #ff5f5f;
+    color: white;
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.movies-list {
+    margin-bottom: 180px;
+}
+
+.movies-list h2 {
+    margin-bottom: 60px;
+}
+
+.movie-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.movie-card {
+    background-color: white;
+    padding: 50;
+    border-radius: 18px;
+    width: 300px;
+    height: 400px;
+    /* film kutucuk boyutu */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.movie-card img {
+    width: 100%;
+    /* Ensures images fill the space */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.movie-card button {
+    background-color: #ff5f5f;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 10%;
+    border: none;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ff5f5f;
+    text-decoration: none;
+}
+
+
+/* Media Queries for Mobile (iPhone 14) */
+
+@media only screen and (max-width: 768px) {
+    header {
+        width: 30%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        /* Ekleme: header'a padding ekleyerek daha derli toplu görünmesini sağladım */
+    }
+    header nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+        padding-left: 0;
+        /* Ekleme: UL öğesinin sol padding'ini sıfırlayarak düzgün hizalama */
+    }
+    header .header-right {
+        margin-top: 20px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    section {
+        padding: 10px;
+    }
+    .movie-details {
+        flex-direction: column;
+        align-items: center;
+        /* Ekleme: Daha düzenli bir görünüm için içeriklerin ortalanması */
+    }
+    .movie-info h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        /* Ekleme: H1 başlığının altına boşluk ekleyerek daha düzenli görünmesini sağladım */
+    }
+    .movie-poster {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .movie-info {
+        width: 100%;
+        padding: 10px;
+        /* Ekleme: Movie info'ya padding ekleyerek daha estetik bir görünüm */
+        box-sizing: border-box;
+        /* Ekleme: padding'i kutu modeline dahil etmek için */
+    }
+    .movies-list h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        /* Ekleme: Başlık ile içerik arasına boşluk ekledim */
+    }
+    .movie-card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .movie-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+    /* Ekstra Stil: Movie card hover efekti eklenebilir */
+    .movie-card:hover {
+        transform: scale(1.05);
+        /* Hover efekti ile film kartları daha interaktif hale gelir */
+        transition: transform 0.3s ease;
+    }
+}
